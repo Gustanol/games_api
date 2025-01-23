@@ -65,7 +65,7 @@ private String shortDescription;
 [(`services/GameService.java`)](./src/main/java/com/example/Spring/Boot/Project/services/GameService.java)
 uses the `findAll()` method, from **JpaRepository**, to return all entities from the main entity.
 After this, it uses the response as parameter for a new **DTO** object, and
-return that as alist.
+return that as a list.
 
 ```java
 List<Game> result = gameRepository.findAll(); // catch all entities
