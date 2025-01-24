@@ -8,7 +8,7 @@ PS: The content of this repository is based on
 
 ## How does it work? 🤔
 
-### After first lesson (2025-01-20):
+### - [After first lesson (2025-01-20)](https://github.com/Gustanol/games_api/tree/v1.0)
 
 - The Game entity
 [(`entities/Game.java`)](./src/main/java/com/example/Spring/Boot/Project/entities/Game.java)
