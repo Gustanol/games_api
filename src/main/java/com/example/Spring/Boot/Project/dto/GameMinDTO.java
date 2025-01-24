@@ -1,6 +1,7 @@
 package com.example.Spring.Boot.Project.dto;
 
 import com.example.Spring.Boot.Project.entities.Game;
+import com.example.Spring.Boot.Project.projections.GameMinProjection;
 
 public class GameMinDTO {
   private Long id;
@@ -18,6 +19,14 @@ public class GameMinDTO {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
+  }
+  
+  public GameMinDTO(GameMinProjection projection) {
+    id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
   }
   
   public Long getId() {

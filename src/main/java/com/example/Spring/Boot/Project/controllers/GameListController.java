@@ -9,8 +9,9 @@
  import org.springframework.web.bind.annotation.PathVariable;
  
  import com.example.Spring.Boot.Project.dto.GameListDTO;
- import com.example.Spring.Boot.Project.dto.GameListDTO;
+ import com.example.Spring.Boot.Project.dto.GameMinDTO;
  import com.example.Spring.Boot.Project.services.GameListService;
+ import com.example.Spring.Boot.Project.services.GameService;
  
  @RestController
  @RequestMapping(value = "/lists")
@@ -18,10 +19,20 @@
    
    @Autowired
    private GameListService gameListService;
+   
+   @Autowired
+   private GameService gameService;
   	
    @GetMapping
    public List<GameListDTO> findAll() {
   		List<GameListDTO> result = gameListService.findAll();
   		return result;
   	}
+  	
+  	@GetMapping(value = "/{listId}/games")
+  	public List<GameMinDTO> findByList(@PathVariable Long listId) {
+  		List<GameMinDTO> result = gameService.findByList(listId);
+  		return result;
+  	}
  }
+ 
